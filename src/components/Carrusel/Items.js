@@ -2,18 +2,18 @@ import React from "react";
 
 const Card = ({ results }) => {
 	let display;
-    let resultsItems = JSON.parse(results);
+    // let resultsItems = JSON.parse(results);
 
-    console.log('results::', resultsItems);
+    console.log('results::', results);
 
-	if (resultsItems) {
-   	    display = resultsItems.map((x, index) => {
-			return (
-                // <div key={index}>
-                    <img className="image-slick" src={x} alt=""/>
-                // </div>
+	if (results) {
+   	    display = 
+			(
+                <div>
+                    <img className="image-slick" src={results} alt=""/>
+                </div>
+                
 			);
-		});
 	} else {
    	    display = "No hay imagenes :/";
 	}

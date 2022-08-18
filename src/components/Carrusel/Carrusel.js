@@ -30,37 +30,32 @@ const SimpleSlider = () => {
             slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 0,
-            autoplay: false,
-            autoplaySpeed: 4000,
+            autoplay: true,
+            autoplaySpeed: 3000,
             cssEase: "linear"
         };
+
+        let resultsItems = JSON.parse(getImage);
 
         return (
             <div>
                 <Slider {...settings}>
-                    <Items
-                        results={getImage}
-                    />
-                    {/* {getImage.map((x, index) => {
+                    {fetchedData !== '' ? resultsItems.map((x, index) => {
+                        return (
+                            <Items
+                                results={x}
+                            />
+                            
+                        );
+		            }) : <p>Esperando datos</p>}
+                    {/* {fetchedData !== '' ? resultsItems.map((x, index) => {
                         return (
                             <div key={index}>
                                 <img className="image-slick" src={x} alt=""/>
                             </div>
                             
                         );
-		            })} */}
-                {/* <div>
-                    <img className="image-slick" src="./images/abstract01.jpg" alt=""/>
-                </div>
-                <div>
-                    <img className="image-slick" src="./images/abstract02.jpg" alt=""/>
-                </div>
-                <div>
-                    <img className="image-slick" src="./images/abstract03.jpg" alt=""/>
-                </div>
-                <div>
-                    <img className="image-slick" src="./images/abstract04.jpg" alt=""/>
-                </div> */}
+		            }) : <p>Esperando datos</p>} */}
                 </Slider>
             </div>
         );
