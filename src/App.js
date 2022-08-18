@@ -11,6 +11,7 @@ import Carrusel from "./components/Carrusel/Carrusel";
 
 import Help from "./Pages/Help/Help";
 import Admin from "./Pages/Admin/Admin";
+import Delete from "./Pages/Delete/Delete";
 
 import './App.scss';
 
@@ -25,6 +26,7 @@ function App() {
 
             <Route path="/help" element={<Help />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/delete" element={<Delete />} />
         </Routes>
     </Router>
   );

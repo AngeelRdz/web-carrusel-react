@@ -51,6 +51,14 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-nav fs-5">
                         <NavLink
+                            to="/delete"
+                            className="nav-link"
+                        >
+                            Borrar
+                        </NavLink>
+                    </div>
+                    <div className="navbar-nav fs-5">
+                        <NavLink
                             to="/help"
                             className="nav-link"
                         >
